@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard",
+  "version": "1.0",
+  "description": "Detect phishing websites using machine learning",
+  "icons": {
+    "16": "img/photo.png",
+    "48": "img/photo.png",
+    "128": "img/photo.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PhishGuard"
+  },
+  "web_accessible_resources": [{
+    "resources": ["warning.html"],
+    "matches": ["<all_urls>"]
+  }]
+}
